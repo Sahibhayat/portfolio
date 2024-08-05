@@ -10,27 +10,17 @@ import { SectionWrapper } from "./HigherOrderComponents";
 // Sample project data
 const projects = [
   {
-    name: "Project 1",
-    description: "This is project 1",
+    name: "Gulmoher fashions a clothing brand",
+    description: "This is project #1",
     tags: [
       { name: "React", color: "text-blue-500" },
       { name: "Next.js", color: "text-green-500" },
     ],
-    image: "/path/to/image1.jpg",
-    source_code_link: "https://github.com/user/project1",
-    netlify_link: "https://project1.netlify.app",
+    image: "/projectimg/gulmoher.png",
+    source_code_link: "https://gulmoher.vercel.app/",
+    netlify_link: "https://gulmoher.vercel.app/",
   },
-  {
-    name: "Project 2",
-    description: "This is project 2",
-    tags: [
-      { name: "TypeScript", color: "text-blue-600" },
-      { name: "Tailwind CSS", color: "text-teal-400" },
-    ],
-    image: "/path/to/image2.jpg",
-    source_code_link: "https://github.com/user/project2",
-    netlify_link: "https://project2.netlify.app",
-  },
+
   // Add more projects as needed
 ];
 
@@ -65,20 +55,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             scale: 1,
             speed: 450,
           }}
-          className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+          className="bg-tertiary p-5  sm:w-[360px] w-full"
         >
           <div className="relative w-full h-[230px]">
             <Image
               src={image}
-              width={1000}
-              height={1000}
+              layout="fill" // Make the image fill the container
+              objectFit="cover" // Ensure the image covers the container
               alt="project_image"
-              className="w-full h-full object-cover rounded-2xl"
+              className="rounded-2xl"
             />
           </div>
 
           <div className="mt-5">
-            <h3 className="text-white font-bold text-[24px]">{name}</h3>
+            <h3 className="text-white font-bold text-[20px]">{name}</h3>
             <p className="mt-2 text-secondary text-[14px]">{description}</p>
           </div>
 
@@ -118,13 +108,13 @@ const Works: React.FC = () => {
           that provide a seamless shopping experience for users.
         </motion.p>
         <p className="mt-3 text-2xl">Tech Stack and Features</p>
-        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]" >
+        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
           Leveraging the power of Next.js, I implemented server-side rendering
           to optimize performance and improve SEO. MongoDB serves as the
           database, storing product information, user data, and order history in
           a scalable and secure manner. I used Redux Toolkit to manage the
-          application&#39;s state, ensuring that features like the shopping cart and
-          user sessions are handled smoothly and efficiently.
+          application&#39;s state, ensuring that features like the shopping cart
+          and user sessions are handled smoothly and efficiently.
         </p>
       </div>
 
